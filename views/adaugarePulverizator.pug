@@ -1,0 +1,45 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/adaugarePulverizator.css')
+        title Adăugare pulverizator
+    body
+        main.main
+            .adaugarePulverizator-form
+                h2.heading-secondary.ma-bt-lg Adaugă un nou pulverizator
+                form.form.form-adaugarePulverizator
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', placeholder='Case', required)
+                    .form__group
+                        label.form__label(for='workingSpeed') Viteza de lucru(km/h)
+                        input#workingSpeed.form__input(type='text', placeholder='13', required)
+                    .form__group
+                        label.form__label(for='functioningHours') Ore de funcționare
+                        input#functioningHours.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='timeSpentInTheFarm') Timp petrecut în fermă(luni)
+                        input#timeSpentInTheFarm.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='tankCapacity') Capacitate rezervor(litri)
+                        input#tankCapacity.form__input(type='text', placeholder='5600',required)
+                    .form__group
+                        label.form__label(for='spreadingWidth') Lățime de lucru(metri)
+                        input#spreadingWidth.form__input(type='text', placeholder='24',required)
+                    .form__group
+                        label.form__label(for='rented') Echipament: Închiriat/Cumpărat
+                        input#rented.form__input(type='text', placeholder='Cumpărat',required)
+                    .form__group
+                        label.form__label(for='description') Descriere
+                        textarea#description.form__textarea(placeholder='Introduceți descrierea echipamentului(opțional)')
+                    
+                    
+                    .form__group
+                        button.btn.btn--green Creare pulverizator
+
+        script(src='/js/bundle.js')

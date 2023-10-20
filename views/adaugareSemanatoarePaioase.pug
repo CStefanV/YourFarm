@@ -1,0 +1,45 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/adaugareSemanatoarePaioase.css')
+        title Adăugare semănătoare păioase
+    body
+        main.main
+            .adaugareSemanatoarePaioase-form
+                h2.heading-secondary.ma-bt-lg Adaugă o nouă semănătoare de păioase
+                form.form.form-adaugareSemanatoarePaioase
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', placeholder='Case', required)
+                    .form__group
+                        label.form__label(for='workingSpeed') Viteza de lucru 
+                        input#workingSpeed.form__input(type='text', placeholder='13', required)
+                    .form__group
+                        label.form__label(for='functioningHours') Ore de funcționare
+                        input#functioningHours.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='timeSpentInTheFarm') Timp petrecut în fermă
+                        input#timeSpentInTheFarm.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='workingWidth') Lățime de lucru
+                        input#workingWidth.form__input(type='text', placeholder='5.6',required)
+                    .form__group
+                        label.form__label(for='requiredTractorPower') Putere tractor necesară
+                        input#requiredTractorPower.form__input(type='text', placeholder='250',required)
+                    .form__group
+                        label.form__label(for='rented') Echipament: Închiriat/Cumpărat
+                        input#rented.form__input(type='text', placeholder='Cumpărat',required)
+                    .form__group
+                        label.form__label(for='description') Descriere
+                        textarea#description.form__textarea(placeholder='Introduceți descrierea echipamentului(opțional)')
+                    
+                    
+                    .form__group
+                        button.btn.btn--green Creare semănătoare
+
+        script(src='/js/bundle.js')

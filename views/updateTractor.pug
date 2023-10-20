@@ -1,0 +1,51 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='/css/updateTractor.css')
+        title Actualizare tractor 
+    body
+        main.main
+            .actualizareTractor-form
+                h2.heading-secondary.ma-bt-lg Actualizeaza datele tractorului
+                    form.form.form-actualizareTractor(action=`/actualizareTractor/${tractor.slug}`, method='POST')
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', name='name', value=tractor.name)
+                    .form__group
+                        label.form__label(for='power') Putere tractor
+                        input#power.form__input(type='text', name='power', value=tractor.power)
+                    .form__group
+                        label.form__label(for='functioningHours') Ore de funcționare
+                        input#functioningHours.form__input(type='text', name='functioningHours', placeholder='100', required, value=tractor.functioningHours)
+                    .form__group
+                        label.form__label(for='timeSpentInTheFarm') Timp petrecut în fermă(luni)
+                        input#timeSpentInTheFarm.form__input(type='text', name='timeSpentInTheFarm', placeholder='100', required, value=tractor.timeSpentInTheFarm)
+                    .form__group
+                        label.form__label(for='usedAt') Folosit pentru(arat,semanat,plantat,fertilizat,cultivat)
+                        input#usedAt.form__input(type='text', name='usedAt', placeholder='arat', required, value=tractor.usedAt)
+                    .form__group
+                        label.form__label(for='maxSpeed') Viteza maximă(km/h)
+                        input#maxSpeed.form__input(type='text', name='maxSpeed', placeholder='60',required, value=tractor.maxSpeed)
+                    .form__group
+                        label.form__label(for='category') Categorie(Mic,Mediu,Mare)
+                        input#category.form__input(type='text', name='category', placeholder='Mic',required, value=tractor.category)
+                    .form__group
+                        label.form__label(for='maxRPM') Rotații(ale motorului)/minut
+                        input#maxRPM.form__input(type='text', name='maxRPM', placeholder='2400',required, value=tractor.maxRPM)
+                    .form__group
+                        label.form__label(for='rented') Echipament: Închiriat/Cumpărat
+                        input#rented.form__input(type='text', name='rented', placeholder='Cumpărat',required, value=tractor.rented)
+                    .form__group
+                        label.form__label(for='description') Descriere
+                        textarea#description.form__textarea(name='description', placeholder='Introduceți descrierea echipamentului(opțional)')= tractor.description
+                    
+                    .form__group
+                        button.btn.btn--green(type='submit') Actualizare tractor
+
+
+        script(src='/js/bundle.js')

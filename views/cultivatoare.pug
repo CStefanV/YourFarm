@@ -1,0 +1,36 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/cultivatoare.css')
+        title Cultivatoare
+    body
+        main.main
+            h1 Dacă încă nu există cultivatoare sau doriți să mai adăugați vreunul în listă, apăsați butonul de mai jos
+            a(href="/cultivatoare")
+                button Adăugare cultivator
+
+
+            .card-container
+
+                each cultivator in cultivatoare  
+                    .card
+                        .card__header                                                     
+                            h3
+                                span= cultivator.name 
+                        .card__details 
+                            .card__data
+                                span= `Lățime de lucru ${cultivator.workingWidth} metri`
+                            .card__data
+                                span= `💨 ${cultivator.workingSpeed} km/h` 
+                            .card__data
+                                span= `🕒 ${cultivator.functioningHours} ore funcționare` 
+                            .card__data
+                                span= `🕒 ${cultivator.timeSpentInTheFarm} luni petrecute în fermă`
+                        .card__footer
+                            a.btn.btn--green.btn--small(href=`/cultivator/${cultivator.slug}`) Detalii
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')

@@ -1,0 +1,102 @@
+doctype html
+include paginaPrincipala.pug
+html 
+  head
+    meta(http-equiv='Content-Security-Policy', content="script-src 'self' 'unsafe-inline' https://unpkg.com")
+    meta(charset='UTF-8') 
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Harta
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css' integrity='sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=' crossorigin='')
+    link(rel='stylesheet' href='/css/harta.css')
+
+  body
+    #map
+      script(src='https://unpkg.com/leaflet@1.9.3/dist/leaflet.js' integrity='sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=' crossorigin='')
+      script.
+        var map = L.map('map').setView([44.296, 28.531], 8);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        navigator.geolocation.watchPosition(success,error);
+
+        let marker,circle,zoomed;
+
+        function success(pos){
+          const lat=pos.coords.latitude;
+          const lng=pos.coords.longitude;
+          const accuracy=pos.coords.accuracy;
+
+          if(marker){
+            map.removeLayer(marker);
+            map.removeLayer(circle);
+          }
+          marker=L.marker([lat,lng],{color:'orange'}).addTo(map);
+          marker.bindPopup('<h3>Locația curenta</h3> Aici te afli')
+          circle=L.circle([lat,lng],{radius:accuracy,color:'green',fillColor:'lightgreen',fillOpacity: 0.45}).addTo(map);
+
+          if(zoomed){
+            zoomed=map.fitBounds(circle.getBounds());
+          }
+          map.setView([lat,lng])
+        
+        }
+        function error(){
+          if(err.code===1){
+            alert('Oferiți acces la locație?');
+          }else{
+            alert('Nu se poate obține locația curentă')
+          }
+        }
+        function fetchMarkers() {
+          fetch(`/api/markers`)
+            .then((response) => response.json())
+            .then((markers) => {
+              markers.forEach((markerData) => {
+                const marker = L.marker([markerData.lat, markerData.lng]).addTo(map);
+                marker.bindPopup(markerData.name);
+                const circle = L.circle([markerData.lat, markerData.lng], {
+                  radius: 200, 
+                  color: 'orange',
+                  fillColor: 'yellow',
+                  fillOpacity: 0.55,
+                }).addTo(map);
+              });
+            })
+            .catch((error) => {
+              console.error('Eroare:', error);
+            });
+        }
+
+        fetchMarkers();
+
+        function onMapClick(e) {
+          const markerName = prompt('Introduceți un nume pentru pin:');
+          if (!markerName) {
+            return; 
+          }
+
+          const marker = L.marker(e.latlng).addTo(map);
+          marker.bindPopup(markerName);
+          fetch('/api/markers', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: markerName, lat: e.latlng.lat, lng: e.latlng.lng }),
+          })
+            .then((response) => {
+              if (response.ok) {
+                console.log('Pin salvat cu succes');
+                fetchMarkers(); 
+              } else {
+                console.error('Nu s-a reușit salvarea pin-ului');
+              }
+            })
+            .catch((error) => {
+              console.error('Eroare:', error);
+            });
+        }
+
+        map.on('click', onMapClick);

@@ -1,0 +1,36 @@
+doctype html
+include paginaPrincipala.pug
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/echipamenteleMele.css')
+        title Echipamente agricole 
+    body 
+        div.container
+            div
+                a(href='/listaTractoare') Tractoare
+                p.info-card Informații           
+            div
+                a(href='/listaCombine') Combine
+                p.info-card Informații        
+            div
+                a(href='/listaHedere') Hedere
+                p.info-card Informații
+            div
+                a(href='/listaPluguri') Pluguri
+                p.info-card Informații
+            div
+                a(href='/listaCultivatoare') Cultivatoare
+                p.info-card Informații
+            div
+                a(href='/listaSemanatoriPaioase') Semănători păioase
+                p.info-card Informații
+            div
+                a(href='/listaSemanatoriPlantatoare') Semănători plantatoare
+                p.info-card Informații
+            div
+                a(href='/listaPulverizatoare') Pulverizatoare
+                p.info-card Informații
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')

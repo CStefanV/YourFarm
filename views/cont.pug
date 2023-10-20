@@ -1,0 +1,42 @@
+doctype html
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/cont.css')
+        title Cont utilizator
+    body
+        .user-view           
+            .user-view__content
+            .user-view__form-container
+                h2 Setările contului tău
+               
+                form.form.form-user-data
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', value=`${user.name}`, required, name='name')
+                    .form__group
+                        label.form__label(for='email') Adresa email
+                        input#email.form__input(type='email', value=`${user.email}`, required, name='email')
+                    .form__group.right
+                        button.btn.btn--small.btn--green Salvare setări
+
+            .user-view__form-container
+                h2 Schimbare parolă
+                form.form.form-user-password
+                    .form__group
+                        label.form__label(for='password-current') Parola curentă
+                        input#password-current.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    .form__group
+                        label.form__label(for='password') Parola nouă
+                        input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    .form__group
+                        label.form__label(for='password-confirm') Confirmare parolă
+                        input#password-confirm.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    .form__group.right
+                        button.btn.btn--small.btn--green.btn--save-password Salvare parolă
+        script(src='/js/bundle.js')
+

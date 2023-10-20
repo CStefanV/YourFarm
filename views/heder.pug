@@ -1,0 +1,45 @@
+doctype html 
+
+
+mixin overviewBox(label,text)
+    .overview-box__detail 
+        span.overview-box__label= label
+        span.overview-box__text= text 
+mixin overviewBox2(text,label)
+    .overview-box__detail 
+        span.overview-box__text= text  
+        span.overview-box__label= label  
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href=' ../css/heder.css')
+        title= heder.name
+    body
+        section.section-header
+            .heading-box
+                h1
+                    span= heder.name
+        section.section-description 
+            .overview-box
+                div 
+                    .overview-box__group 
+                        h2 Principalele informații despre acest heder                     
+                        +overviewBox(`Lățime de lucru ${heder.workingWidth}`,'metri')
+                        +overviewBox(`Compatibil cu combina ${heder.compatibleWith}`,'')
+                        +overviewBox( `🕒 ${heder.functioningHours}`,' ore funcționare')
+                        +overviewBox(`🕒 ${heder.timeSpentInTheFarm}`,' luni petrecute în fermă')
+                         
+                    .overview-box__group 
+                        h2 Alte informații despre heder
+                        +overviewBox2('Închiriat/cumpărat: ',` ${heder.rented}`)
+                         
+            .description-box
+                h2= `Descriere a hederului ${heder.name}`
+                .description__text= heder.description
+            a(href="/listaHedere")
+                button.deleteBtnHeder(data-heder-id=heder._id) Sterge heder
+        script(src='/js/bundle.js')
+
+                        

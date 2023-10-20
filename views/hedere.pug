@@ -1,0 +1,36 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/hedere.css')
+        title Hedere
+    body
+        main.main
+            h1 Dacă încă nu există hedere sau doriți să mai adăugați vreunul în listă, apăsați butonul de mai jos
+            a(href="/hedere")
+                button Adăugare heder
+
+
+            .card-container
+
+                each heder in hedere  
+                    .card
+                        .card__header                                                    
+                            h3
+                                span= heder.name 
+                        .card__details 
+                            .card__data
+                                span= `Lățime de lucru ${heder.workingWidth} metri`
+                            .card__data
+                                span= `Compatibil cu combina ${heder.compatibleWith} ` 
+                            .card__data
+                                span= `🕒 ${heder.functioningHours} ore funcționare` 
+                            .card__data
+                                span= `🕒 ${heder.timeSpentInTheFarm} luni petrecute în fermă`
+                        .card__footer
+                            a.btn.btn--green.btn--small(href=`/heder/${heder.slug}`) Detalii
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')

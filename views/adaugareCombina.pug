@@ -1,0 +1,47 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/adaugareCombina.css')
+        title Adăugare combină
+    body
+        main.main
+            .adaugareCombina-form
+                h2.heading-secondary.ma-bt-lg Adaugă combină nouă
+                form.form.form-adaugareCombina
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', placeholder='Fendt', required)
+                    .form__group
+                        label.form__label(for='power') Putere combină
+                        input#power.form__input(type='text', placeholder='600', required)
+                    .form__group
+                        label.form__label(for='functioningHours') Ore de funcționare
+                        input#functioningHours.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='timeSpentInTheFarm') Timp petrecut în fermă
+                        input#timeSpentInTheFarm.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='maxSpeed') Viteza maximă(km/h)
+                        input#maxSpeed.form__input(type='text', placeholder='35',required)
+                    .form__group
+                        label.form__label(for='tank') Capacitate buncăr(litri)
+                        input#tank.form__input(type='text', placeholder='15000',required)
+                    .form__group
+                        label.form__label(for='rented') Echipament: Închiriat/Cumpărat
+                        input#rented.form__input(type='text', placeholder='Cumpărat',required)
+                    .form__group
+                        label.form__label(for='description') Descriere
+                        textarea#description.form__textarea(placeholder='Introduceți descrierea echipamentului(opțional)')
+
+                    
+                    
+                    
+                    .form__group
+                        button.btn.btn--green Creare combină
+
+        script(src='/js/bundle.js')

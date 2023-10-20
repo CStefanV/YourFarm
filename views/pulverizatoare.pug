@@ -1,0 +1,34 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/pulverizatoare.css')
+        title Pulverizatoare
+    body
+        main.main
+            h1 Dacă încă nu există pulverizatoare sau doriți să mai adăugați vreunul în listă, apăsați butonul de mai jos
+            a(href="/pulverizatoare")
+                button Adăugare pulverizator
+
+            .card-container
+                each pulverizator in pulverizatoare 
+                    .card
+                        .card__header                                                    
+                            h3
+                                span= pulverizator.name 
+                        .card__details 
+                            .card__data
+                                span= `Capacitate rezervor: ${pulverizator.tankCapacity} litri`
+                            .card__data
+                                span= `💨 ${pulverizator.workingSpeed} km/h` 
+                            .card__data
+                                span= `🕒 ${pulverizator.functioningHours} ore funcționare` 
+                            .card__data
+                                span= `🕒 ${pulverizator.timeSpentInTheFarm} luni petrecute in fermă`
+                        .card__footer
+                            a.btn.btn--green.btn--small(href=`/pulverizator/${pulverizator.slug}`) Detalii
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')

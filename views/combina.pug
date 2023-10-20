@@ -1,0 +1,47 @@
+doctype html 
+
+mixin overviewBox(label,text)
+    .overview-box__detail 
+        span.overview-box__label= label
+        span.overview-box__text= text 
+mixin overviewBox2(text,label)
+    .overview-box__detail 
+        span.overview-box__text= text  
+        span.overview-box__label= label  
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href=' ../css/combina.css')
+        title= combina.name
+    body
+        section.section-header
+            .heading-box
+                h1
+                    span= combina.name
+        section.section-description 
+            .overview-box
+                div 
+                    .overview-box__group 
+                        h2 Principalele informații despre această combină                    
+                        +overviewBox(`🐴 ${combina.power}`,' cai putere')
+                        +overviewBox(`💨 ${combina.maxSpeed}`,' km/h')
+                        +overviewBox( `🕒 ${combina.functioningHours}`,' ore funcționare')
+                        +overviewBox(`🕒 ${combina.timeSpentInTheFarm}`,' luni petrecute în fermă')
+                         
+                    .overview-box__group 
+                        h2 Alte informații despre combină
+                        +overviewBox2('Închiriat/cumpărat: ',` ${combina.rented}`)
+                        +overviewBox2('Marime buncăr: ',` ${combina.tank}`)
+                         
+            .description-box
+                h2= `Descriere a combinei ${combina.name}`
+                .description__text= combina.description
+            a(href="/listaCombine")
+                button.deleteBtnCombina(data-combina-id=combina._id) Sterge combina
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')
+        script(src='/js/bundle.js')
+
+
+                        

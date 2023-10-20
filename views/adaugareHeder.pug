@@ -1,0 +1,42 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/adaugareHeder.css')
+        title Adăugare heder 
+    body
+        main.main
+            .adaugareHeder-form
+                h2.heading-secondary.ma-bt-lg Adaugă un nou heder
+                form.form.form-adaugareHeder
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', placeholder='John Deere', required)
+                    .form__group
+                        label.form__label(for='compatibleWith') Compatibil cu 
+                        input#compatibleWith.form__input(type='text', placeholder='John Deere X9 1100', required)
+                    .form__group
+                        label.form__label(for='functioningHours') Ore de funcționare
+                        input#functioningHours.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='timeSpentInTheFarm') Timp petrecut în fermă
+                        input#timeSpentInTheFarm.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='workingWidth') Lățime de lucru
+                        input#workingWidth.form__input(type='text', placeholder='12.7',required)
+                    .form__group
+                        label.form__label(for='rented') Echipament: Închiriat/Cumpărat
+                        input#rented.form__input(type='text', placeholder='Cumpărat',required)
+                    .form__group
+                        label.form__label(for='description') Descriere
+                        textarea#description.form__textarea(placeholder='Introduceți descrierea echipamentului(opțional)')
+                    
+                    
+                    .form__group
+                        button.btn.btn--green Creare heder
+
+        script(src='/js/bundle.js')

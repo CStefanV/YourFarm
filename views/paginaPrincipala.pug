@@ -1,0 +1,34 @@
+doctype html
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='/css/paginaPrincipala.css')
+        title Ferma ta
+    body
+        nav.navbar
+            ul
+                li.pozaNavbar
+                    a(href='/paginaPrincipala') FERMA
+                li
+                    a(href='#') ACTIVITĂȚI
+                    ul
+                        li
+                            a(href='/utilajePentruArat') ARAT
+                            a(href='/utilajePentruCultivat') CULTIVAT
+                            a(href='/utilajePentruSemanat') SEMĂNAT
+                            a(href='/utilajePentruFertilizat') FERTILIZAT
+                            a(href='/utilajePentruRecoltat') RECOLTARE         
+                li
+                    a(href='/harta') VIZUALIZARE HARTĂ
+                li 
+                    a(href='/echipamenteleMele') ECHIPAMENTELE MELE
+                li
+                    a(href='https://bursacereale.com/') BURSA CEREALELOR
+                li.end-buttons
+                    a.logoutBtn(href='#') DECONECTARE
+                li.end-buttons
+                    a(href='/cont') CONT UTILIZATOR
+      
+        script(src='/js/bundle.js')

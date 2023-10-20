@@ -1,0 +1,51 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/adaugareTractor.css')
+        title Adăugare tractor 
+    body
+        main.main
+            .adaugareTractor-form
+                h2.heading-secondary.ma-bt-lg Adaugă un tractor nou
+                form.form.form-adaugareTractor
+                    .form__group
+                        label.form__label(for='name') Nume
+                        input#name.form__input(type='text', placeholder='John Deere', required)
+                    .form__group
+                        label.form__label(for='power') Putere tractor
+                        input#power.form__input(type='text', placeholder='200', required)
+                    .form__group
+                        label.form__label(for='functioningHours') Ore de funcționare
+                        input#functioningHours.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='timeSpentInTheFarm') Timp petrecut în fermă(luni)
+                        input#timeSpentInTheFarm.form__input(type='text', placeholder='100', required)
+                    .form__group
+                        label.form__label(for='usedAt') Folosit pentru(arat,semanat,plantat,fertilizat,cultivat)
+                        input#usedAt.form__input(type='text', placeholder='arat', required)
+                    .form__group
+                        label.form__label(for='maxSpeed') Viteza maximă(km/h)
+                        input#maxSpeed.form__input(type='text', placeholder='60',required)
+                    .form__group
+                        label.form__label(for='category') Categorie(Mic,Mediu,Mare)
+                        input#category.form__input(type='text', placeholder='Mic',required)
+                    .form__group
+                        label.form__label(for='maxRPM') Rotații(ale motorului)/minut
+                        input#maxRPM.form__input(type='text', placeholder='2400',required)
+                    .form__group
+                        label.form__label(for='rented') Echipament: Închiriat/Cumpărat
+                        input#rented.form__input(type='text', placeholder='Cumpărat',required)
+                    .form__group
+                        label.form__label(for='description') Descriere
+                        textarea#description.form__textarea(placeholder='Introduceți descrierea echipamentului(opțional)')
+                    
+                    
+                    .form__group
+                        button.btn.btn--green Creare tractor
+
+        script(src='/js/bundle.js')

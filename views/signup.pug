@@ -1,0 +1,29 @@
+doctype html 
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/signup.css')
+        title Creare cont 
+    body
+        main.main
+            .signup-form
+                h2 Creaza-ti un cont
+                form.form.form--signup
+                    .form__group
+                        label.form__label(for='name') Nume și prenume
+                        input#name.form__input(type='text', placeholder='', required)
+                    .form__group
+                        label.form__label(for='email') Adresa Email
+                        input#email.form__input(type='email', placeholder='you@example.com', required)
+                    .form__group
+                        label.form__label(for='password') Parolă
+                        input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    .form__group
+                        label.form__label(for='passwordConfirm') Confirmare parolă
+                        input#passwordConfirm.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    .form__group
+                        button.btn.btn--green Creare cont
+
+        script(src='/js/bundle.js')

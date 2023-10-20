@@ -1,0 +1,35 @@
+doctype html 
+include paginaPrincipala.pug
+
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/semanatoriPaioase.css')
+        title Semănători păioase
+    body
+        main.main
+            h1 Dacă încă nu există semănători sau doriți să mai adăugați vreuna în listă, apăsați butonul de mai jos
+            a(href="/semanatoriPaioase")
+                button Adăugare semănătoare păioase
+
+
+            .card-container
+                each semanatoarePaioase in semanatoriPaioase  
+                    .card
+                        .card__header                                                    
+                            h3
+                                span= semanatoarePaioase.name 
+                        .card__details 
+                            .card__data
+                                span= `Lățime de lucru ${semanatoarePaioase.workingSurface} metri`
+                            .card__data
+                                span= `💨 ${semanatoarePaioase.workingSpeed} km/h` 
+                            .card__data
+                                span= `🕒 ${semanatoarePaioase.functioningHours} ore funcționare` 
+                            .card__data
+                                span= `🕒 ${semanatoarePaioase.timeSpentInTheFarm} luni petrecute în fermă`
+                        .card__footer
+                            a.btn.btn--green.btn--small(href=`/semanatoarePaioase/${semanatoarePaioase.slug}`) Detalii
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')

@@ -1,0 +1,24 @@
+doctype html 
+html
+    head 
+        meta(charset='UTF-8') 
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='css/login.css')
+        title Logare in cont 
+    body
+        main.main
+            .login-form
+                h2 Autentificați-vă în contul dumneavoastră
+                form.form.form--login
+                    .form__group
+                        label.form__label(for='email') Adresa Email
+                        input#email.form__input(type='email', placeholder='you@example.com', required)
+                    .form__group
+                        label.form__label(for='password') Parola
+                        input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    .form__group
+                        button.btn.btn--green Autentificare
+
+        
+        script(src='/js/bundle.js')
