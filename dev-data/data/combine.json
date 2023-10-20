@@ -1,0 +1,41 @@
+[
+  {
+    "id": 0,
+    "name": "JOHN DEERE X9 1100",
+    "brand": "JOHN DEERE",
+    "model": "X9 1100",
+    "power": 700,
+    "tank": 19300,
+    "rented": "Cumparat",
+    "functioningHours": 3400,
+    "timeSpentInTheFarm": 34,
+    "maxSpeed": 40,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  },
+  {
+    "id": 1,
+    "name": "JOHN DEERE X9 1100",
+    "brand": "JOHN DEERE",
+    "model": "X9 1100",
+    "power": 700,
+    "tank": 19300,
+    "rented": "Cumparat",
+    "functioningHours": 3400,
+    "timeSpentInTheFarm": 34,
+    "maxSpeed": 40,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  },
+  {
+    "id": 2,
+    "name": "FENDT IDEAL 10T",
+    "brand": "FENDT",
+    "model": "IDEAL 10T",
+    "power": 790,
+    "tank": 21000,
+    "rented": "Cumparat",
+    "functioningHours": 3400,
+    "timeSpentInTheFarm": 34,
+    "maxSpeed": 40,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  }
+]

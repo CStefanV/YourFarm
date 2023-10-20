@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "5c8a1d5b0190b214360dc057",
+    "name": "Stefan Valentin",
+    "email": "admin@farm.com",
+    "active": true,
+    "password": "pass1234"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa181",
+    "name": "Michelle Michelle",
+    "email": "mclmcl@example.com",
+    "active": true,
+    "password": "$2a$12$hP1h2pnNp7wgyZNRwPsOTeZuNzWBv7vHmsR3DT/OaPSUBQT.y0S.."
+  },
+  {
+    "_id": "5c8a1e1a2f8fb814b56fa182",
+    "name": "Patrick Louis",
+    "email": "patrick@example.com",
+    "active": true,
+    "password": "$2a$12$9nFqToiTmjgfFVJiQvjmreLt4k8X4gGYCETGapSZOb2hHa55t0dDq"
+  },
+  {
+    "_id": "5c8a1ec62f8fb814b56fa183",
+    "name": "Sebastian Andrei",
+    "email": "sebiand@example.com",
+    "active": true,
+    "password": "$2a$12$tm33.M/4pfEbZF64WbFuHuVFv85v4qEhi.ik8njbud7yaoqCZpjiy"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa184",
+    "name": "Bogdan Mihai",
+    "email": "bogdanm@example.com",
+    "active": true,
+    "password": "$2a$12$OOPr90tBEBF1Iho3ox0Jde0O/WXUR0VLA5xdh6tWcu7qb.qOCvSg2"
+  }
+]

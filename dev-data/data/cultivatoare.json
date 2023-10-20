@@ -1,0 +1,15 @@
+[
+  {
+    "id": 0,
+    "name": "FORTSCHRITT T890 B01",
+    "brand": "FORTSCHRITT",
+    "model": "T890 B01",
+    "requiredTractorPower": 215,
+    "workingSpeed": 16,
+    "workingWidth": 9,
+    "functioningHours": 500,
+    "timeSpentInTheFarm": 26,
+    "rented": "Cumparat",
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  }
+]

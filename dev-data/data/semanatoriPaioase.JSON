@@ -1,0 +1,67 @@
+[
+  {
+    "id": 0,
+    "name": "LEMKEN SOLITAIR 12",
+    "brand": "LEMKEN",
+    "model": "SOLITAIR 12",
+    "requiredTractorPower": 180,
+    "workingSpeed": 15,
+    "workingSurface": 12,
+    "rented": "Cumparat",
+    "functioningHours": 500,
+    "timeSpentInTheFarm": 26,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  },
+  {
+    "id": 1,
+    "name": "LEMKEN SOLITAIR 12",
+    "brand": "LEMKEN",
+    "model": "SOLITAIR 12",
+    "requiredTractorPower": 180,
+    "workingSpeed": 15,
+    "workingSurface": 12,
+    "rented": "Cumparat",
+    "functioningHours": 500,
+    "timeSpentInTheFarm": 26,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  },
+  {
+    "id": 2,
+    "name": "AMAZON CITAN 15001-C",
+    "brand": "AMAZON",
+    "model": "CITAN 15001-C",
+    "requiredTractorPower": 300,
+    "workingSpeed": 16,
+    "workingSurface": 15,
+    "rented": "Cumparat",
+    "functioningHours": 500,
+    "timeSpentInTheFarm": 26,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  },
+  {
+    "id": 3,
+    "name": "AMAZON CITAN 15001-C",
+    "brand": "AMAZON",
+    "model": "CITAN 15001-C",
+    "requiredTractorPower": 300,
+    "workingSpeed": 16,
+    "workingSurface": 15,
+    "rented": "Cumparat",
+    "functioningHours": 500,
+    "timeSpentInTheFarm": 26,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  },
+  {
+    "id": 4,
+    "name": "VADERSTAD RAPID A 800S",
+    "brand": "VADERSTAD",
+    "model": "RAPID A 800S",
+    "requiredTractorPower": 240,
+    "workingSpeed": 16,
+    "workingSurface": 8,
+    "rented": "Cumparat",
+    "functioningHours": 500,
+    "timeSpentInTheFarm": 26,
+    "description:": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus rutrum, posuere turpis vel, cursus urna. Phasellus mi urna, blandit sit amet ultricies vel, molestie sed dui. Cras volutpat est diam, sed ultricies sapien tristique et. Sed facilisis vel nulla vitae dignissim. Duis gravida turpis vitae odio tempus aliquam. Nunc semper ac tortor sit amet tempus. Proin elit risus, blandit nec enim non, lobortis pretium odio. Praesent vestibulum fermentum justo, in bibendum quam viverra vel. Pellentesque at est dictum eros finibus convallis id in sem."
+  }
+]
