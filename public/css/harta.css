@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#map {
+  height: 800px;
+  width: 1300px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  transition: 0.41s ease;
+}
+
+#map:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-11px);
+}

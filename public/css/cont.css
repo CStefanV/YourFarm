@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/pozaCont.jpg');
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #000000e4;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form__group {
+  margin-bottom: 10px;
+}
+
+.form__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form__input[type='password'] {
+  font-family: monospace;
+}
+
+.form__input[type='email'] {
+  font-style: italic;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #62d306;
+}
+
+.btn--small {
+  font-size: 14px;
+}
+
+.btn--green {
+  background-color: #4caf50;
+}
+
+.btn--save-password {
+  background-color: #4caf50;
+}
+
+.user-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.user-view__content {
+  text-align: center;
+}
+
+.user-view__form-container {
+  max-width: 700px;
+  margin: 40px;
+}
+
+.user-view__form-container:last-child {
+  margin-bottom: 0;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.6rem 15rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+.alert--success {
+  background-color: #20bf6b;
+}
+.alert--error {
+  background-color: #eb4d4b;
+}

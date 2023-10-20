@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../img/pozaTractor.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-header {
+  flex: 0 0 auto;
+  margin: 60px 600px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #ffbb01, #ecec08, #0fe94d);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+.section-description {
+  flex: 1 0 auto;
+  padding: 10px;
+  margin: 100px 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ffbb01, #ecec08, #0fe94d);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.heading-box h1 {
+  font-size: 50px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 255, 162, 0.7),
+    rgba(0, 124, 128, 0.7)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.overview-box {
+  margin-bottom: 20px;
+}
+
+.overview-box__detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.overview-box__label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #555;
+}
+
+.overview-box__text {
+  margin-right: 10px;
+  color: #888;
+}
+
+.overview-box__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.description-box {
+  margin-top: 20px;
+}
+
+.description__text {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 25px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 255, 162, 0.7),
+    rgba(0, 124, 128, 0.7)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.deleteBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #28a745;
+  color: #fff;
+}
+
+.deleteBtn:hover {
+  background-color: #1e7e34;
+}
+
+@media screen and (max-width: 600px) {
+  .overview-box__detail {
+    flex-direction: column;
+  }
+
+  .overview-box__label,
+  .overview-box__text {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
